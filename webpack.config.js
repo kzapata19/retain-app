@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 var path = require('path');
+=======
+var path = require('path')
+>>>>>>> module-1
 var webpack = require('webpack');
 
 var config = {
@@ -30,8 +34,7 @@ var config = {
   ],
 
   resolve: {
-    extensions: ['', '.ts', '.js', '.json'],
-    modulesDirectories: ['node_modules']
+    extensions: ['', '.ts', '.js', '.json']
   },
 
   devServer: {
