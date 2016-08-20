@@ -5,7 +5,8 @@ import { Notes } from './notes';
 @Component({
   selector: 'main-container',
   directives: [
-    AppBar
+    AppBar,
+    Notes
   ],
   template: `
     <div class="main-container">

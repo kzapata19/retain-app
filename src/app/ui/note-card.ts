@@ -1,4 +1,9 @@
-import { Component, Input } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter
+} from '@angular/core';
 
 @Component({
   selector: 'note-card',
@@ -34,25 +39,34 @@ import { Component, Input } from '@angular/core';
       cursor: pointer;
     }
   `],
-  template:`
-    <div class="note-card row shadow-1">
-      <div class="icon" (click)="onChecked()">
+  template: `
+    <div
+      [ngStyle]="{'background-color': note.color}"
+      class="note-card row shadow-1"
+      (mouseenter)="toggle()"
+      (mouseleave)="toggle()"
+    >
+      <div class="icon" *ngIf='showCheck' (click)="onChecked()">
         <i class="material-icons">check</i>
       </div>
       <div class="col-xs-12 title">
-        {{note.title}}
+        {{ note.title }}
       </div>
       <div class="col-xs-12 value">
-        {{note.value}}
+        {{ note.value }}
       </div>
     </div>
   `
 })
 export class NoteCard {
-  @Input() note = {}
+  @Input() note = {};
+  showCheck: boolean = false;
 
-  onChecked(){
-    console.log("clicked")
+  toggle(){
+    this.showCheck = !this.showCheck;
   }
 
-};
+  onChecked() {
+    console.log('note clicked');
+  }
+}
