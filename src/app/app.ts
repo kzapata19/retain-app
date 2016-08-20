@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+<<<<<<< HEAD
 
 @Component({
   selector: 'app',
@@ -12,3 +13,19 @@ import { Component } from '@angular/core';
 })
 
 export class App {}
+=======
+import { Main } from './containers';
+
+@Component({
+  selector: 'app',
+  directives: [
+    Main
+  ],
+  template: `
+    <div>
+      <main-container></main-container>
+    </div>
+  `
+})
+export class App {}
+>>>>>>> module-2
