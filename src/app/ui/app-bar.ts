@@ -20,9 +20,8 @@ import { Component } from '@angular/core';
       font-weight: 400;
       cursor: pointer;
     }
-  `
-  ],
-  template:`
+  `],
+  template: `
     <header class="app-bar row middle-xs">
       <span class="logo col-xs-10">
         Retain
@@ -36,5 +35,4 @@ import { Component } from '@angular/core';
     </header>
   `
 })
-
 export class AppBar {}

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { AppBar } from '../ui';
+import { AppBar } from '../ui/app-bar';
+import { Notes } from './notes';
 
 @Component({
   selector: 'main-container',
@@ -7,10 +8,10 @@ import { AppBar } from '../ui';
     AppBar
   ],
   template: `
-    <div>
-    <app-bar></app-bar>
+    <div class="main-container">
+      <app-bar></app-bar>
       <main class="main">
-        content will go here
+        <notes-container></notes-container>
       </main>
     </div>
   `
